@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blackjack Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Blackjack</h1>
+
+  <!-- Add inside <body> -->
+  <div class="theme-selector">
+    <label for="theme">Theme:</label>
+    <select id="theme" onchange="changeTheme(this.value)">
+      <option value="default">Classic</option>
+      <option value="dark">Dark</option>
+      <option value="casino">Casino</option>
+      <option value="neon">Neon</option>
+    </select>
+  </div>
+
+  <div id="game-area">
+    <div id="game-count"></div>
+
+    <div class="hand-container">
+      <h2>Your Hand</h2>
+      <div id="player-hand" class="card-container"></div>
+      <div id="player-value"></div>
+    </div>
+
+    <div class="hand-container">
+      <h2>Dealer's Hand</h2>
+      <div id="dealer-hand" class="card-container"></div>
+      <div id="dealer-value"></div>
+    </div>
+
+    <div id="result"></div>
+
+    <div class="controls">
+      <button onclick="startGame()">Start Game</button>
+      <button onclick="hit()">Hit</button>
+      <button onclick="stand()">Stand</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
